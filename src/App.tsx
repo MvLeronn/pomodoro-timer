@@ -1,9 +1,8 @@
-import { View } from 'react-native';
-import { Home } from './pages/Home';
 import { useFonts } from 'expo-font';
 import * as SplashScreen from 'expo-splash-screen';
 import { Inter_400Regular, Inter_700Bold } from '@expo-google-fonts/inter';
 import { useEffect } from 'react';
+import { AppRoutes } from './AppRoutes';
 
 SplashScreen.preventAutoHideAsync();
 
@@ -23,9 +22,5 @@ export function App() {
     return null;
   }
 
-  return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Home />
-    </View>
-  );
+  return <AppRoutes />
 }
